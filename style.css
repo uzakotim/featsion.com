@@ -1,6 +1,4 @@
 .footer-image {
-    width: 120px; /* set the width of the image */
-    height: 100px; /* set the height of the image */
-    margin-bottom: 10px; /* add margin to separate the image from the paragraph */
-    margin-top: 0px;
+    width: 60px; /* set the width of the image */
+    height: 40px; /* set the height of the image */
 }
