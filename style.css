@@ -2,3 +2,10 @@
     width: 60px; /* set the width of the image */
     height: 40px; /* set the height of the image */
 }
+/* Add a media query for mobile devices and apply the desired styles */
+@media (max-width: 767px) {
+    .footer-image.logo-image {
+        width: 50px; /* Adjust the width as needed for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
