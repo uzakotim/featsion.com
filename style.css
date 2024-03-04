@@ -50,8 +50,4 @@
         width: 50px; /* Adjust the width as needed for mobile */
         height: auto; /* Maintain aspect ratio */
     }
-    .article-image.small-size-article {
-        width: 100px;
-        height: auto;
-    }
 }
