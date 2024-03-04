@@ -41,9 +41,6 @@
     text-align: center;
     z-index: 1;
 }
-.container {
-    margin-right: 100px;
-}
 /* Add a media query for mobile devices and apply the desired styles */
 @media (max-width: 767px) {
     .footer-image.logo-image {
