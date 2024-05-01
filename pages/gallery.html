@@ -13,9 +13,12 @@
             href="../assets/images/logo.svg"
             type="image/x-icon"
         />
-        <meta name="tutorials" content="Featsion Robotics. Инструкции." />
+        <meta
+            name="Gallery of robots"
+            content="Featsion Robotics. Gallery."
+        />
 
-        <title>Home</title>
+        <title>Gallery</title>
         <link
             rel="stylesheet"
             href="../assets/bootstrap/css/bootstrap.min.css"
@@ -28,7 +31,7 @@
             rel="stylesheet"
             href="../assets/bootstrap/css/bootstrap-reboot.min.css"
         />
-        <link rel="stylesheet" href="../assets/parallax/jarallax.css" />
+        <link rel="stylesheet" href="../style.css" />
         <link
             rel="stylesheet"
             href="../assets/web/assets/gdpr-plugin/gdpr-styles.css"
@@ -37,16 +40,14 @@
         <link rel="stylesheet" href="../assets/theme/css/style.css" />
         <link
             rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap"
+            href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
             as="style"
             onload="this.onload=null;this.rel='stylesheet'"
         />
-        <link rel="stylesheet" href="../style.css" />
-
         <noscript
             ><link
                 rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap&display=swap"
+                href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
         /></noscript>
         <link
             rel="preload"
@@ -59,10 +60,12 @@
             type="text/css"
         />
     </head>
-    <body>
+    <body style="background-color: rgb(15, 21, 50)">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">Featsion Robotics</a>
+                <a class="navbar-brand" href="../index.html"
+                    >Featsion Robotics</a
+                >
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -93,44 +96,86 @@
         </nav>
         <section
             data-bs-version="5.1"
-            class="cid-u5G7YSNlEl mbr-fullscreen mbr-parallax-background"
+            class="features15 cid-ubxycWX4jc"
+            id="features16-e"
+            style="
+                background-color: rgb(216, 205, 185);
+                color: rgb(17, 27, 45);
+            "
         >
-            <div
-                class="mbr-overlay"
-                style="
-                    opacity: 1;
-
-                    background-color: rgb(28, 20, 61);
-                    /* background-color: rgb(30, 102, 146, 0.823); */
-                    /* background-image: url(assets/images/v1.jpg); */
-
-                    background-size: cover;
-                    background-position: center;
-                "
-            >
-                <div class="align-center">
-                    <div
-                        class="col"
-                        style="
-                            margin-right: 0;
-                            margin-left: 0;
-                            width: 100%;
-                        "
-                    >
-                        <div class="article">
-                            <img
-                                src="../assets/images/IMG_0369.webp"
-                                alt="Photo 1"
-                                class="article-image"
-                            />
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="row align-items-center mb-4 mt-4">
+                        <div class="col-12 col-lg mt-4">
+                            <div class="text-wrapper">
+                                <h6
+                                    class="card-title mbr-fonts-style display-2"
+                                >
+                                    <strong
+                                        >Micro-controller based electric
+                                        car</strong
+                                    >
+                                </h6>
+                                <p
+                                    class="mbr-text mbr-fonts-style mb-4 display-4"
+                                >
+                                    The car comprises an ESP32
+                                    microcontroller, Arduino Mega, and an
+                                    L293D driver shield. It is controlled
+                                    via WiFi by an iOS app.
+                                </p>
+                            </div>
                         </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="image-wrapper">
+                                <img
+                                    src="../assets/images/IMG_0369.heic"
+                                    alt="Arduino car top view"
+                                    style="border-radius: 20px"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="article">
-                            <img
-                                src="../assets/images/IMG_0373.webp"
-                                alt="Photo 2"
-                                class="article-image"
-                            />
+        <section
+            data-bs-version="5.1"
+            class="features16 cid-ubxydCmQgM"
+            id="features17-f"
+            style="background-color: rgb(15, 21, 50); color: white"
+        >
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="row align-items-center mb-4 mt-4">
+                        <div class="col-12 col-lg-6">
+                            <div class="image-wrapper">
+                                <img
+                                    src="../assets/images/IMG_0373.heic"
+                                    alt="Arduino car side view"
+                                    style="border-radius: 20px"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg mt-4">
+                            <div class="text-wrapper">
+                                <h6
+                                    class="card-title mbr-fonts-style display-5"
+                                >
+                                    <strong
+                                        >Energetically efficient
+                                        design</strong
+                                    >
+                                </h6>
+                                <p
+                                    class="mbr-text mbr-fonts-style mb-4 display-4"
+                                >
+                                    Two batteries enable driving for a long
+                                    period: one charges the motors, another
+                                    the control units.<br />
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,14 +212,12 @@
                 </a>
             </div>
         </section>
-
-        <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/parallax/jarallax.js"></script>
-        <script src="../assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>
-        <script src="../assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>
-        <script src="../assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="../assets/ytplayer/index.js"></script>
-        <script src="../assets/theme/js/script.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>
+        <script src="assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>
+        <script src="assets/smoothscroll/smooth-scroll.js"></script>
+        <script src="assets/ytplayer/index.js"></script>
+        <script src="assets/theme/js/script.js"></script>
 
         <input
             name="cookieData"
