@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/featsion.com/static/css/main.e6c13ad2.css",
+    "main.js": "/featsion.com/static/js/main.48eb6e7f.js",
+    "static/js/453.99588fff.chunk.js": "/featsion.com/static/js/453.99588fff.chunk.js",
+    "index.html": "/featsion.com/index.html",
+    "main.e6c13ad2.css.map": "/featsion.com/static/css/main.e6c13ad2.css.map",
+    "main.48eb6e7f.js.map": "/featsion.com/static/js/main.48eb6e7f.js.map",
+    "453.99588fff.chunk.js.map": "/featsion.com/static/js/453.99588fff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.48eb6e7f.js"
+  ]
+}
