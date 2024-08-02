@@ -1,7 +1,6 @@
 const { execSync } = require("child_process");
 const args = process.argv.slice(2);
 
-const repoUrl = args[0];
 const branchName = args[1] || "gh-pages"; // Default to 'gh-pages' if not provided
 
 function runCommand(command) {
@@ -9,10 +8,6 @@ function runCommand(command) {
 }
 
 try {
-    console.log(`Cloning repository from ${repoUrl}`);
-    runCommand(`git clone ${repoUrl} temp-repo`);
-    process.chdir("temp-repo");
-
     console.log(`Checking out to ${branchName}`);
     runCommand(`git checkout ${branchName}`);
 
@@ -23,11 +18,10 @@ try {
     console.log("Committing the empty state");
     runCommand("git add -A");
     runCommand('git commit -m "Clear gh-pages branch"');
-    runCommand("git push origin " + branchName);
+    runCommand("git push");
 
-    console.log("Cleaning up");
-    process.chdir("..");
-    runCommand("rm -rf temp-repo");
+    console.log("Checking out to main");
+    runCommand("git checkout main");
 
     console.log("Successfully cleared gh-pages branch");
 } catch (error) {
