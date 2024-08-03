@@ -2,5 +2,9 @@
     "welcome": "Welcome to Featsion Robotics",
     "maintenance": "The site is currently under maintenance",
     "dark_mode": "Dark Mode",
-    "light_mode": "Light Mode"
+    "light_mode": "Light Mode",
+    "Step1Title": "STEP 1",
+    "Step1Text": "I am a card with some random text that should be instruction on how to make a first step in making a car",
+    "Step2Title": "STEP 2",
+    "Step2Text": "I am a card with some random text that should be instruction on how to make a first step in making a car"
 }
