@@ -48,6 +48,15 @@ function App() {
             <GlobalStyles />
             <Helmet>
                 <title>Featsion Robotics</title>
+                <meta
+                    name="description"
+                    content="Instructions on how to make a personal DIY robot"
+                />
+                <meta property="og:title" content="Featsion Robotics" />
+                <meta
+                    property="og:description"
+                    content="Instructions on how to make a personal DIY robot"
+                />
             </Helmet>
             <header
                 style={{
