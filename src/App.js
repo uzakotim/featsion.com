@@ -15,13 +15,18 @@ import SmallCard from "./components/SmallCard";
 function App() {
     const { t, i18n } = useTranslation();
     const [theme, setTheme] = useState("light");
+    const [isRussian, setIsRussian] = useState(
+        i18n.language.startsWith("ru")
+    );
 
     const toggleTheme = () => {
         setTheme(theme === "light" ? "dark" : "light");
     };
 
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
+    const changeLanguage = () => {
+        const newLanguage = isRussian ? "en" : "ru";
+        i18n.changeLanguage(newLanguage);
+        setIsRussian(!isRussian);
     };
     const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -55,16 +60,14 @@ function App() {
                 }}
             >
                 <Button
-                    onClick={() => changeLanguage("ru")}
+                    onClick={() => changeLanguage()}
                     style={{ marginRight: "8px" }}
                 >
-                    <RU style={{ width: "24px", height: "16px" }} />
-                </Button>
-                <Button
-                    onClick={() => changeLanguage("en")}
-                    style={{ marginRight: "8px" }}
-                >
-                    <GB style={{ width: "24px", height: "16px" }} />
+                    {isRussian ? (
+                        <RU style={{ width: "24px", height: "16px" }} />
+                    ) : (
+                        <GB style={{ width: "24px", height: "16px" }} />
+                    )}
                 </Button>
                 <ThemeSwitcher toggleTheme={toggleTheme} />
             </header>
@@ -79,13 +82,21 @@ function App() {
             <div className="w-[80vw] mx-auto flex justify-center items-center">
                 {isSmallScreen ? (
                     <SmallCard
-                        imageSrc="./IMG_0677.JPG"
+                        imageSrc={
+                            theme === "light"
+                                ? "./step1.webp"
+                                : "./step1_dark.webp"
+                        }
                         title={t("Step1Title")}
                         text={t("Step1Text")}
                     />
                 ) : (
                     <LeftLargeCard
-                        imageSrc="./IMG_0677.JPG"
+                        imageSrc={
+                            theme === "light"
+                                ? "./step1.webp"
+                                : "./step1_dark.webp"
+                        }
                         title={t("Step1Title")}
                         text={t("Step1Text")}
                     />

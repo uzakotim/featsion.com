@@ -10,8 +10,8 @@ export const lightTheme = {
 export const darkTheme = {
     body: "#020421",
     text: "#FFF",
-    cardBackground: "#ffffff",
+    cardBackground: "#000000",
     cardShadow: "0 4px 6px rgba(0, 0, 0, 0.3)",
-    titleColor: "#020421",
-    textColor: "#020421",
+    titleColor: "#fff",
+    textColor: "#fff",
 };
