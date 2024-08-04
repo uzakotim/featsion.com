@@ -29,9 +29,9 @@ const SmallCard = ({ imageSrc, title, text }) => {
                 <img
                     src={imageSrc}
                     alt={title}
-                    className="w-[80vw] h-[80vw] rounded-lg mr-4"
+                    className="w-[600px] h-[400px] rounded-lg mr-4"
                 />
-                <div className="flex flex-col items-center w-[80vw]">
+                <div className="flex flex-col items-center w-[80vw] text-justify">
                     <Title>{title}</Title>
                     <Text>{text}</Text>
                 </div>

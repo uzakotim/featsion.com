@@ -29,9 +29,9 @@ const LeftLargeCard = ({ imageSrc, title, text }) => {
                 <img
                     src={imageSrc}
                     alt={title}
-                    className="w-[800px] h-[400px] rounded-lg mr-4"
+                    className="w-[600px] h-[400px] rounded-lg mr-4"
                 />
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center text-justify">
                     <Title>{title}</Title>
                     <Text>{text}</Text>
                 </div>

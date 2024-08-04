@@ -104,24 +104,6 @@ function App() {
             </div>
             {/* Spacer */}
             <div className="mx-auto flex justify-center h-40 items-center"></div>
-            {/* Card */}
-            <div className="w-[80vw] mx-auto flex justify-center items-center">
-                {isSmallScreen ? (
-                    <SmallCard
-                        imageSrc="./IMG_0677.JPG"
-                        title={t("Step2Title")}
-                        text={t("Step2Text")}
-                    />
-                ) : (
-                    <RightLargeCard
-                        imageSrc="./IMG_0677.JPG"
-                        title={t("Step2Title")}
-                        text={t("Step2Text")}
-                    />
-                )}
-            </div>
-            {/* Spacer */}
-            <div className="mx-auto flex justify-center h-40 items-center"></div>
         </ThemeProvider>
     );
 }
