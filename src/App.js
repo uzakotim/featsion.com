@@ -12,6 +12,7 @@ import "./App.css";
 import LeftLargeCard from "./components/LeftLargeCard";
 import RightLargeCard from "./components/RightLargeCard";
 import SmallCard from "./components/SmallCard";
+import ImageCard from "./components/ImageCard";
 function App() {
     const { t, i18n } = useTranslation();
     const [theme, setTheme] = useState("light");
@@ -81,14 +82,25 @@ function App() {
                 <ThemeSwitcher toggleTheme={toggleTheme} />
             </header>
             {/* Welcome */}
-            <main className="flex flex-col items-center justify-center h-[50vh] text-center">
+            <main className="flex flex-col items-center justify-center h-[25vh] text-center">
                 <h1 className="text-4xl font-bold">{t("welcome")}</h1>
                 <h2 className="text-2xl font-semibold">
                     {t("maintenance")}
                 </h2>
             </main>
             {/* Card */}
-            <div className="w-[80vw] mx-auto flex justify-center items-center">
+            <div className="w-[90vw] mx-auto flex justify-center items-center">
+                <ImageCard
+                    imageSrc={
+                        theme === "light"
+                            ? "./step1.webp"
+                            : "./step1_dark.webp"
+                    }
+                    title="Step 1"
+                    text="Step 1 text"
+                />
+            </div>
+            {/* <div className="w-[80vw] mx-auto flex justify-center items-center">
                 {isSmallScreen ? (
                     <SmallCard
                         imageSrc={
