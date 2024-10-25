@@ -1,5 +1,5 @@
 import React from "react";
-function ThemeSwitcher({ toggleTheme }) {
+function ThemeSwitcher({ toggleTheme , isDarkMode}) {
     return (
         <label
             style={{
@@ -34,7 +34,7 @@ function ThemeSwitcher({ toggleTheme }) {
                 className="toggle toggle-primary" // DaisyUI toggle classes
                 onChange={toggleTheme}
                 style={{
-                    backgroundColor: "#ffffff", // Background color for unchecked state
+                    backgroundColor: isDarkMode ? "#ffffff" : "#020421", // Background color of the toggle switch
                     "--toggle-knob-color": "#ffffff", // Color of the toggle knob
                 }}
             />

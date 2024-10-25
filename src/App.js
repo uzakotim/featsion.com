@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive';
+
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./themes";
 import { GlobalStyles } from "./global";
@@ -13,6 +15,7 @@ import LeftLargeCard from "./components/LeftLargeCard";
 import RightLargeCard from "./components/RightLargeCard";
 import SmallCard from "./components/SmallCard";
 import ImageCard from "./components/ImageCard";
+import Footer from "./components/Footer";
 function App() {
     const { t, i18n } = useTranslation();
     const [theme, setTheme] = useState("light");
@@ -30,6 +33,7 @@ function App() {
         setIsRussian(!isRussian);
     };
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+    const isDarkMode = useMediaQuery({ query: '(prefers-color-scheme: dark)' });
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 640px)");
@@ -79,7 +83,7 @@ function App() {
                         <GB style={{ width: "24px", height: "16px" }} />
                     )}
                 </Button>
-                <ThemeSwitcher toggleTheme={toggleTheme} />
+                <ThemeSwitcher toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             </header>
             {/* Welcome */}
             <main className="flex flex-col items-center justify-center h-[25vh] text-center">
@@ -100,31 +104,9 @@ function App() {
                     text="Step 1 text"
                 />
             </div>
-            {/* <div className="w-[80vw] mx-auto flex justify-center items-center">
-                {isSmallScreen ? (
-                    <SmallCard
-                        imageSrc={
-                            theme === "light"
-                                ? "./step1.webp"
-                                : "./step1_dark.webp"
-                        }
-                        title={t("Step1Title")}
-                        text={t("Step1Text")}
-                    />
-                ) : (
-                    <LeftLargeCard
-                        imageSrc={
-                            theme === "light"
-                                ? "./step1.webp"
-                                : "./step1_dark.webp"
-                        }
-                        title={t("Step1Title")}
-                        text={t("Step1Text")}
-                    />
-                )}
-            </div>
             {/* Spacer */}
             <div className="mx-auto flex justify-center h-40 items-center"></div>
+            <Footer />
         </ThemeProvider>
     );
 }
